@@ -1,0 +1,87 @@
+classDiagram
+    class Alimento {
+        <<abstract>>
+        - String nombre
+        - double calorias
+        - double peso
+        - double carbohidratos
+        - double proteinas
+        - double grasas
+        + Alimento(nombre: String, calorias: double, peso: double, carbohidratos: double, proteinas: double, grasas: double)
+        + getNombre() String
+        + getCalorias() double
+        + getPeso() double
+        + getCarbohidratos() double
+        + getProteinas() double
+        + getGrasas() double
+        + setNombre(nombre: String) void
+        + setCalorias(calorias: double) void
+        + setPeso(peso: double) void
+        + setCarbohidratos(carbohidratos: double) void
+        + setProteinas(proteinas: double) void
+        + setGrasas(grasas: double) void
+        + abstract obtenerTipo() String
+        + mostrarInformacion() void
+        + calcularCalorias() double
+    }
+
+    class Verdura {
+        - boolean esOrganica
+        - String temporada
+        + Verdura(nombre: String, calorias: double, peso: double, carbohidratos: double, proteinas: double, grasas: double, esOrganica: boolean, temporada: String)
+        + isEsOrganica() boolean
+        + getTemporada() String
+        + setEsOrganica(esOrganica: boolean) void
+        + setTemporada(temporada: String) void
+        + obtenerTipo() String
+    }
+
+    class Carne {
+        - String tipoCarne
+        - String corte
+        + Carne(nombre: String, calorias: double, peso: double, carbohidratos: double, proteinas: double, grasas: double, tipoCarne: String, corte: String)
+        + getTipoCarne() String
+        + getCorte() String
+        + setTipoCarne(tipoCarne: String) void
+        + setCorte(corte: String) void
+        + obtenerTipo() String
+    }
+
+    class Fruta {
+        - boolean esCitrica
+        - String temporada
+        + Fruta(nombre: String, calorias: double, peso: double, carbohidratos: double, proteinas: double, grasas: double, esCitrica: boolean, temporada: String)
+        + isEsCitrica() boolean
+        + getTemporada() String
+        + setEsCitrica(esCitrica: boolean) void
+        + setTemporada(temporada: String) void
+        + obtenerTipo() String
+    }
+
+    class Lacteo {
+        - String tipoLacteo
+        - double porcentajeGrasa
+        + Lacteo(nombre: String, calorias: double, peso: double, carbohidratos: double, proteinas: double, grasas: double, tipoLacteo: String, porcentajeGrasa: double)
+        + getTipoLacteo() String
+        + getPorcentajeGrasa() double
+        + setTipoLacteo(tipoLacteo: String) void
+        + setPorcentajeGrasa(porcentajeGrasa: double) void
+        + obtenerTipo() String
+    }
+
+    class Cereal {
+        - boolean esIntegral
+        - String tipoGrano
+        + Cereal(nombre: String, calorias: double, peso: double, carbohidratos: double, proteinas: double, grasas: double, esIntegral: boolean, tipoGrano: String)
+        + isEsIntegral() boolean
+        + getTipoGrano() String
+        + setEsIntegral(esIntegral: boolean) void
+        + setTipoGrano(tipoGrano: String) void
+        + obtenerTipo() String
+    }
+
+    Alimento <|-- Verdura
+    Alimento <|-- Carne
+    Alimento <|-- Fruta
+    Alimento <|-- Lacteo
+    Alimento <|-- Cereal
