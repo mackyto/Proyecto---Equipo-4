@@ -1,0 +1,28 @@
+/* Estilos base para las páginas de Deportes/formularios */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 100%), url(../img/Fondo-scaled.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body#in {
+    padding: 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #fff;
+}
+
+p {
+    color: #eee;
+}
+
+section {
+    margin-bottom: 2rem;
+}

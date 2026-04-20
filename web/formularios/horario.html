@@ -1,0 +1,307 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 39 - Formulario votación</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link  rel="stylesheet" href="../stylo/filprom22-a.css">
+
+</head>
+<body id="forhor">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+
+      <div class="accordion" id="accordionone">
+          <div class="card">
+            <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+              <button class="btn btn-light w-100" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                <img class="img-thumnail float-left" src="../caratulas/Atm_sfera_cero-Poster-EEUU.jpg" alt="poster atmosfera cero">
+                <span class="text-left  d-none d-md-block align-botton">Atmosfera Cero</span><span class="w-100 d-md-none d-block">Atmosfera Cero</span>
+               </button> 
+            </h2>
+            </div>
+      
+            <div id="collapseOne" class="collapse">
+            <div class="card-body">
+                <table class="table table-light table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Día</th>
+                        <th>Fecha</th>
+                        <th>Sala</th>
+                        <th>Hora</th>
+                       </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <tr>
+                        <td>Jueves</td>
+                        <td>9-6-2022</td>
+                        <td>1</td>
+                        <td>18:00</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes</td>
+                        <td>10-6-2022</td>
+                        <td>5</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr>
+                        <td>Sabado</td>
+                        <td>11-6-2022</td>
+                        <td>3</td>
+                        <td>23:00</td>
+                      </tr>
+                  </tbody>
+                </table>           
+            </div>
+            </div>
+          </div>
+      </div>
+          
+      <div class="accordion" id="accordiontwo">
+          <div class="card">
+          <div class="card-header" id="headingtwo">
+            <h2 class="mb-0">
+              <button class="btn btn-light w-100" type="button" data-toggle="collapse" data-target="#collapsetwo" aria-expanded="false" aria-controls="collapsetwo">
+                <img class="img-thumnail float-left" src="../caratulas/Star-Wars.jpg" alt="poster StarWars">
+                <span class="text-left  d-none d-md-block align-botton">Star Wars Episodio 4</span><span class="w-100 d-md-none d-block">Star Wars Episodio 4</span>
+               </button>
+            </h2>
+          </div>
+
+          <div id="collapsetwo" class="collapse">
+            <div class="card-body">
+                <table class="table table-light table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Día</th>
+                        <th>Fecha</th>
+                        <th>Sala</th>
+                        <th>Hora</th>
+                       </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <tr>
+                        <td>Jueves</td>
+                        <td>9-6-2022</td>
+                        <td>1</td>
+                        <td>23:00</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes</td>
+                        <td>10-6-2022</td>
+                        <td>5</td>
+                        <td>18:00</td>
+                      </tr>
+                      <tr>
+                        <td>Sabado</td>
+                        <td>11-6-2022</td>
+                        <td>3</td>
+                        <td>20:30</td>
+                      </tr>
+                  </tbody>
+                </table>                
+            </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="accordion" id="accordionthree">
+          <div class="card">
+          <div class="card-header" id="headingthree">
+            <h2 class="mb-0">
+              <button class="btn btn-light w-100" type="button" data-toggle="collapse" data-target="#collapsethree" aria-expanded="false" aria-controls="collapsethree">
+                <img class="img-thumnail float-left" src="../caratulas/star-trek.jpg" alt="poster Star Trek La Pelicula">
+                <span class="text-left  d-none d-md-block align-botton">Star Trek La Pelicula</span><span class="w-100 d-md-none d-block">Star Trek La Pelicula</span>
+               </button>
+            </h2>
+          </div>
+          <div id="collapsethree" class="collapse">
+            <div class="card-body">
+                <table class="table table-light table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Día</th>
+                        <th>Fecha</th>
+                        <th>Sala</th>
+                        <th>Hora</th>
+                       </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <tr>
+                        <td>Jueves</td>
+                        <td>9-6-2022</td>
+                        <td>5</td>
+                        <td>23:00</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes</td>
+                        <td>10-6-2022</td>
+                        <td>3</td>
+                        <td>16:30</td>
+                      </tr>
+                      <tr>
+                        <td>Sabado</td>
+                        <td>11-6-2022</td>
+                        <td>1</td>
+                        <td>20:30</td>
+                      </tr>
+                  </tbody>
+                </table>                
+            </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="accordion" id="accordionfour">
+          <div class="card">
+          <div class="card-header" id="headingfour">
+            <h2 class="mb-0">
+              <button class="btn btn-light w-100" type="button" data-toggle="collapse" data-target="#collapsefour" aria-expanded="false" aria-controls="collapsefour">
+                <img class="img-thumnail float-left" src="../caratulas/alien-el-octavo-pasajero.jpg" alt="poster Alien El Octavo Pasagero">
+                <span class="text-left  d-none d-md-block align-botton">Alien El Octavo Pasagero</span><span class="w-100 d-md-none d-block">Alien El Octavo Pasagero</span>
+               </button>
+            </h2>
+          </div>
+          <div id="collapsefour" class="collapse">
+            <div class="card-body">
+                <table class="table table-light table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Día</th>
+                        <th>Fecha</th>
+                        <th>Sala</th>
+                        <th>Hora</th>
+                       </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <tr>
+                        <td>Jueves</td>
+                        <td>9-6-2022</td>
+                        <td>5</td>
+                        <td>16:30</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes</td>
+                        <td>10-6-2022</td>
+                        <td>3</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr>
+                        <td>Sabado</td>
+                        <td>11-6-2022</td>
+                        <td>1</td>
+                        <td>23:00</td>
+                      </tr>
+                  </tbody>
+                </table>                
+            </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="accordion" id="accordionfive">
+          <div class="card">
+          <div class="card-header" id="headingfive">
+            <h2 class="mb-0">
+              <button class="btn btn-light w-100" type="button" data-toggle="collapse" data-target="#collapsefive" aria-expanded="false" aria-controls="collapsefive">
+                <img class="img-thumnail float-left" src="../caratulas/2001.jpg" alt="poster Blade Runner">
+                <span class="text-left  d-none d-md-block align-botton">Blade Runner</span><span class="w-100 d-md-none d-block">Blade Runner</span>
+               </button>
+            </h2>
+          </div>
+          <div id="collapsefive" class="collapse">
+            <div class="card-body">
+                <table class="table table-light table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Día</th>
+                        <th>Fecha</th>
+                        <th>Sala</th>
+                        <th>Hora</th>
+                       </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <tr>
+                        <td>Jueves</td>
+                        <td>9-6-2022</td>
+                        <td>1</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes</td>
+                        <td>10-6-2022</td>
+                        <td>5</td>
+                        <td>23:00</td>
+                      </tr>
+                      <tr>
+                        <td>Sabado</td>
+                        <td>11-6-2022</td>
+                        <td>3</td>
+                        <td>18:00</td>
+                      </tr>
+                  </tbody>
+                </table>                
+            </div>
+          </div>
+          </div>
+      </div>
+
+      <div class="accordion" id="accordionsix">
+          <div class="card">
+          <div class="card-header" id="headingsix">
+            <h2 class="mb-0">
+              <button class="btn btn-light w-100" type="button" data-toggle="collapse" data-target="#collapsesix" aria-expanded="false" aria-controls="collapsesix">
+                <img class="img-thumnail float-left" src="../caratulas/2001.jpg" alt="poster 2001 odise en el Espacio">
+                <span class="text-left  d-none d-md-block align-botton">2001:Odisea en el Espacio</span><span class="w-100 d-md-none d-block">2001:Odisea en el Espacio</span>
+               </button>
+            </h2>
+          </div>
+          <div id="collapsesix" class="collapse">
+            <div class="card-body">
+                <table class="table table-light table-striped">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th>Día</th>
+                        <th>Fecha</th>
+                        <th>Sala</th>
+                        <th>Hora</th>
+                       </tr>
+                    </thead>
+                    <tbody class="table-light">
+                      <tr>
+                        <td>Jueves</td>
+                        <td>9-6-2022</td>
+                        <td>5</td>
+                        <td>20:30</td>
+                      </tr>
+                      <tr>
+                        <td>Viernes</td>
+                        <td>10-6-2022</td>
+                        <td>3</td>
+                        <td>23:00</td>
+                      </tr>
+                      <tr>
+                        <td>Sabado</td>
+                        <td>11-6-2022</td>
+                        <td>1</td>
+                        <td>16:30</td>
+                      </tr>
+                  </tbody>
+                </table>                
+            </div>
+          </div>
+          </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

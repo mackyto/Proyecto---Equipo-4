@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Ejercicio 32 - Constelaciones LM</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link  rel="stylesheet" href="../stylo/filprom22-a.css">
+    <script>
+      // Ejemplo starter JavaScript para evitar envíos invalidos de formularios
+      (function() {
+        'use strict';
+        window.addEventListener('load', function() {
+          // Fetch all the forms we want to apply custom Bootstrap validation styles to
+          var forms = document.getElementsByClassName('needs-validation');
+          // Loop over them and prevent submission
+          var validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+              if (form.checkValidity() === false) {
+                event.preventDefault();
+                event.stopPropagation();
+              }
+              form.classList.add('was-validated');
+            }, false);
+          });
+        }, false);
+      })();
+    </script>
+
+
+</head>
+<body id="vot">
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-9 mx-auto">
+      <h1 class="h1 text-center text-light">Votaciones</h1>
+      <form class="needs-validation" action="#" method="post" novalidate>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="no1" class="text-light col-form-label-sm d-block d-md-none">Nombre del votante</label>
+          <label for="no2" class="text-light col-form-label d-none d-md-block d-lg-none">Nombre del votante</label>
+          <label for="no3" class="text-light col-form-label-lg d-none d-lg-block">Nombre del votante</label>
+          <input type="text" class="form-control controlform form-control-sm d-block d-md-none" id="no1" placeholder="Nombre y apellidos" name="nom" required>
+          <input type="text" class="form-control controlform d-none d-md-block d-lg-none" id="no2" placeholder="Nombre y apellidos" name="nom" required>
+          <input type="text" class="form-control controlform form-control-lg d-none d-lg-block" id="no3" placeholder="Nombre y apellidos" name="nom" required>
+        </div>
+        <div class="form-group col-md-6">
+          <label for="em1" class="text-light col-form-label-sm d-block d-md-none">Correo electronico</label>
+          <label for="em2" class="text-light col-form-label d-none d-md-block d-lg-none">Correo electronico</label>
+          <label for="em3" class="text-light col-form-label-lg d-none d-lg-block">Correo electronico</label>
+          <input type="email" class="form-control controlform form-control-sm d-block d-md-none needs-validation" id="em1" placeholder="correo" name="eml" required>
+          <input type="email" class="form-control controlform d-none d-md-block d-lg-none needs-validation" id="em2" placeholder="correo" name="eml" required>
+          <input type="email" class="form-control controlform form-control-lg d-none d-lg-block needs-validation" id="em3" placeholder="correo" name="eml" required>
+        </div>
+      </div>
+<ul class="nav nav-pills">
+      <li>
+      <div class="row">
+        <div class="col-2 d-none d-md-block"><img class="image-fluid" src="../caratulas/Atm_sfera_cero-Poster-EEUU.jpg" alt="Poster Atmosfera cero"></div>
+        <div class="col-12 col-md-10">
+        <div class="nav-link h1 text-dark mt-3">Atmosfera Cero</div>
+        <span class="lead fs-6 text-dark mx-3">¿Indica tu opinión?</span>
+        <div class="d-block d-md-none"></div>
+        <div class="d-block d-md-none"></div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra1" id="r1" value="si">
+          <label class="form-check-label text-dark" for="r1">Me gustó</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra1" id="r2" value="no">
+          <label class="form-check-label text-dark" for="r2">No me gustó</label>
+        </div>
+      </div></div></li>
+
+      <li>
+      <div class="row">
+        <div class="col-2 d-none d-md-block"><img class="image-fluid" src="../caratulas/Star-Wars.jpg" alt="Poster StarWars"></div>
+        <div class="col-12 col-md-10">
+        
+        <div class="nav-link h1 text-dark mt-3">Star Wars Episodio 4</div>
+        <span class="lead fs-6 text-dark mx-3">¿Indica tu opinión?</span>
+        <div class="d-block d-md-none"></div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra2" id="r3" value="si">
+          <label class="form-check-label text-dark" for="r3">Me gustó</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra2" id="r4" value="no">
+          <label class="form-check-label text-dark" for="r4">No me gustó</label>
+      </div>
+      </div></div></li>
+
+      <li><div class="row">
+        <div class="col-2 d-none d-md-block"><img class="image-fluid" src="../caratulas/star-trek.jpg" alt="Poster StarTrek"></div>
+        <div class="col-12 col-md-10">
+        <div class="nav-link h1 text-dark mt-3">Star Trek La Película</div>
+        <span class="lead fs-6 text-dark mx-3">¿Indica tu opinión?</span>
+        <div class="d-block d-md-none"></div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra3" id="r5" value="si">
+          <label class="form-check-label text-dark" for="r5">Me gustó</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra3" id="r6" value="no">
+          <label class="form-check-label text-dark" for="r6">No me gustó</label>
+        </div>
+      </div></div></li>
+
+      <li><div class="row">
+        <div class="col-2 d-none d-md-block"><img class="image-fluid" src="../caratulas/alien-el-octavo-pasajero.jpg" alt="Poster Alien"></div>
+        <div class="col-12 col-md-10">
+        <div class="nav-link h1 text-dark mt-3">Alien el Octavo Pasagero</div>
+        <span class="lead fs-6 text-dark mx-3">¿Indica tu opinión?</span>
+        <div class="d-block d-md-none"></div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra4" id="r7" value="si">
+          <label class="form-check-label text-dark" for="r7">Me gustó</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra4" id="r8" value="no">
+          <label class="form-check-label text-dark" for="r8">No me gustó</label>
+        </div>
+      </div></div></li>
+
+      <li><div class="row">
+        <div class="col-2 d-none d-md-block"><img class="image-fluid" src="../caratulas/blade-runner.jpeg" alt="Blade Runner"></div>
+        <div class="col-12 col-md-10">
+        <div class="nav-link h1 text-dark mt-3">Blade Runner</div>
+        <span class="lead fs-6 text-dark mx-3">¿Indica tu opinión?</span>
+        <div class="d-block d-md-none"></div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra5" id="r9" value="si">
+          <label class="form-check-label text-dark" for="r9">Me gustó</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra5" id="r10" value="no">
+          <label class="form-check-label text-dark" for="r10">No me gustó</label>
+        </div>
+      </div></div></li>
+        
+      <li><div class="row">
+        <div class="col-2 d-none d-md-block"><img class="image-fluid" src="../caratulas/2001.jpg" alt="Poster 2001"></div>
+        <div class="col-12 col-md-10">
+        <div class="nav-link h1 text-dark mt-3">2001: Odisea en el Espacio</div>
+        <span class="lead fs-6 text-dark mx-3">¿Indica tu opinión?</span>
+        <div class="d-block d-md-none"></div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra6" id="r11" value="si">
+          <label class="form-check-label text-dark" for="r11">Me gustó</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="ra6" id="r12" value="no">
+          <label class="form-check-label text-dark" for="r12">No me gustó</label>
+          </div>
+      </div></div></li>
+</ul>
+      <div class="my-4 form-check">
+        <input type="checkbox" class="form-check-input" id="ck2" name="ck" required>
+        <label class="form-check-label text-light" for="ck2">Confirmo mi opinión</label>
+      </div>
+
+      <div class="custom-file mb-4">
+        <input type="file" class="custom-file-input col-form-label-sm d-block d-md-none form-control-sm" id="cf" required>
+        <input type="file" class="custom-file-input col-form-label d-none d-md-block d-lg-none" id="cf2" required>
+        <input type="file" class="custom-file-input col-form-label-lg d-none d-lg-block" id="cf3" required>
+        <label class="custom-file-label controlform col-form-label-sm d-block d-md-none" for="cf">Enseñame tu entrada</label>
+        <label class="custom-file-label controlform col-form-label d-none d-md-block d-lg-none" for="cf">Enseñame tu entrada</label>
+        <label class="custom-file-label controlform col-form-label-lg d-none d-lg-block" for="cf">Enseñame tu entrada</label>
+      <div class="invalid-feedback">¡¡ERROR!! (Bad Width)</div>
+      </div>
+
+      <div class="d-flex justify-content-around">
+        <button type="submit" class="btn btn-primary flex-grow-1">Enviar</button>
+        <button type="reset" class="btn btn-danger flex-grow-1">Borrar</button>
+      </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
