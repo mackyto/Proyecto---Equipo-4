@@ -1,9 +1,78 @@
-Quiero una pagina web con archivos html, css y java script, en archivos separados, la cual quiero que tenga tambien esta paleta de colores (insertar paleta de colores), que tenga: 
-Una pagina inicial en la cual se encuentren las distintas paginas web adiacentes, las cuales son: 
-  Una de las paginas adiiacentes que sea quienes somos.
-  otra pagina que sea un formulario de ingreso en el que tengas que poner el nombre, apellidos, correo electronico, numero de telefono, y que los campos sean obligatorios.
-  otra pagina que nos muestre en el mapa donde nos pueden encontrar, y que sea interactivo.
-  otra pagina que sea una tienda donde pueden comprar nuestro merchandising como pueden ser shakers, bolsas con el logo de la empresa puestos, etc.
-  otra pagina que sea los menus de la alimentacion que van a estar operativos para los clientes, en el cual tambien puedas configurar tu tus propios menus segun  lo que elijas de primer plato.
-  En la pagina de inicio, quiero que metas un apartado donde metas anuncios y publicidad sobre deportes, no quiero que te centres en uno solo, sino que exista variedad, tambien quiero que cada X minutos cambie de noticia automaticamente.
-aparte quiero que metas en todas las paginas web una opcion que sea de contactanos en la cual sean 2 botones, uno para aceder al gmail, y la otra para acceder al numero de telefono, aparte que contenga tambien las redes sociales como pueden ser  X, instagram, tik tok, facebook.
+PRIMER PROMP
+
+Actúa como un Desarrollador Web Front-End Senior y Diseñador de Experiencia de Usuario (UX/UI). Tu tarea es generar el código completo, limpio y profesional para una página web corporativa y responsiva. 
+
+Debes entregar el proyecto estructurado en archivos completamente separados: `index.html`, `style.css` y `script.js`.
+
+### 1. REQUISITOS TÉCNICOS GENERALES:
+- **Diseño Responsivo:** El sitio debe ser 100% adaptable (Mobile First) usando Flexbox y CSS Grid, garantizando una visualización óptima en smartphones, tablets y ordenadores de escritorio.
+- **Internacionalización (Idiomas):** Prepara el archivo HTML con atributos de traducción o estructura el código JS con un objeto de idiomas (Español/Inglés por defecto) para que el contenido sea fácilmente traducible mediante selectores.
+- **Paleta de Colores (Basada en la imagen de referencia):** 
+  - Color Principal (60% de la web): [Inserta aquí el color principal o describe el de tu primera imagen, ej: Blanco/Gris claro]
+  - Color Secundario (30% de la web): [Inserta aquí el color secundario, ej: Azul oscuro/Negro]
+  - Color de Acento (10% para botones y enlaces clave): [Inserta aquí el color llamativo, ej: Naranja/Verde]
+
+### 2. NAVEGACIÓN Y ESTRUCTURA FIJA (Header y Footer):
+- **Menú de Navegación Superior (Sticky Navbar):** Debe mantenerse fijado en la parte superior (`position: fixed` o `sticky`) al hacer scroll. Debe contener enlaces directos a las 5 secciones/páginas adyacentes. El último elemento del menú debe ser un botón estilizado que desplace al usuario o lo redirija de vuelta a la "Página Inicial".
+- **Pie de Página (Footer de Contacto):** Debe aparecer al final de cada sección/página. Incluirá un apartado llamado "Contáctanos" con dos botones de acción directa:
+  1. Botón Gmail: Enlace tipo `mailto:tu-correo@gmail.com`.
+  2. Botón WhatsApp: Enlace directo usando la API de WhatsApp (`https://wa.me/tu-numero`).
+
+### 3. CONTENIDO POR SECCIONES / PÁGINAS (Single Page con secciones o archivos separados):
+
+- **Página Inicial (Home):**
+  - Zona de bienvenida con el logotipo de la empresa en tamaño grande [Inserta aquí la referencia a tu segunda imagen] centrado y destacado.
+
+- **Página 1: Quiénes Somos:**
+  - Sección corporativa con diseño limpio (tarjetas o dos columnas) donde se explique la historia de la empresa, misión, quiénes somos y a qué nos dedicamos.
+
+- **Página 2: Formulario de Ingreso:**
+  - Un formulario de registro e ingreso estético.
+  - Campos obligatorios (`required`): Nombre y Apellidos, Correo Electrónico y Número de Teléfono. No se debe permitir el envío si falta algún dato.
+
+- **Página 3: Ubicación e Instalaciones:**
+  - Integración de un contenedor para mapa interactivo (puedes usar un iframe de Google Maps como sustituto profesional).
+  - Una galería de fotos optimizada y en cuadrícula (grid) que muestre las instalaciones.
+
+- **Página 4: Tienda de Merchandising:**
+  - Una pequeña tienda e-commerce visual.
+  - Muestra tarjetas de producto con imagen, título, precio y un botón de "Añadir al carrito" o "Comprar ahora".
+
+- **Página 5: Menús Equilibrados:**
+  - Una sección dedicada a mostrar varios menús equilibrados y saludables para el día (Desayuno, Almuerzo, Cena), organizados de forma visual mediante pestañas (tabs) o tarjetas elegantes.
+
+Por favor, proporciona primero el código estructurado de `index.html`, seguido de las hojas de estilo en `style.css` con variables CSS para la paleta de colores, y finalmente el comportamiento dinámico en `script.js`.
+
+
+PRIMER PROMP COMPLEMENTARIO
+
+Ahora, vamos a realizar una actualización y reestructuración profunda sobre el proyecto web anterior. Aplica los siguientes cambios manteniendo el diseño limpio, profesional y el código optimizado:
+
+### 1. REBRANDING (Identidad de Marca)
+- Cambia el nombre de la página web, los títulos y la tienda de merchandising al nombre oficial: **Mazcufit**. Asegúrate de que el logo de la página inicial y el diseño general reflejen este nombre de forma corporativa.
+
+### 2. ARQUITECTURA MULTIPÁGINA (Páginas Independientes)
+- Ya no queremos una estructura de "Single Page Application" (todo en una sola ventana). El sitio debe dividirse en **archivos HTML totalmente independientes** para cada sección.
+- Genera la estructura de enlaces correcta en el Menú Superior (Navbar) para navegar entre ellos:
+  - `index.html` (Página Inicial / Home)
+  - `nosotros.html` (Quiénes Somos)
+  - `registro.html` (Formulario de Ingreso)
+  - `ubicacion.html` (Mapa e Instalaciones)
+  - `tienda.html` (Tienda de Merchandising Mazcufit)
+  - `menus.html` (Menús Equilibrados del Día)
+- El menú persistente (Sticky Navbar) y el pie de página (Footer de Contacto con Gmail y WhatsApp) deben estar clonados e implementados exactamente igual en los 6 archivos HTML.
+
+### 3. IMPLEMENTACIÓN DE LA PALETA DE COLORES (Mazcufit Style)
+- Evita por completo el diseño genérico de fondo blanco plano con texto rojo. Queremos una estética premium y deportiva.
+- Define y aplica una paleta de colores integrada a través de variables CSS (`:root`) que se distribuya así:
+  - **Color de Fondo y Bloques Principales:** Un tono oscuro, moderno y elegante (como un gris grafito oscuro o negro azulado `#121214` o `#1a1a1a`) para dar un aspecto de gimnasio/fitness premium.
+  - **Color de Texto y Superficies Secundarias:** Tonos grises claros y blancos texturizados para garantizar una legibilidad excelente sobre el fondo oscuro.
+  - **Color de Acento (Detalles, Botones, Enlaces activos y Hover):** Un color vibrante y energético (como un verde neón, amarillo fitness o un rojo quemado deportivo) que resalte exclusivamente en los botones de contacto, botones de compra de la tienda y enlaces del menú.
+
+### 4. ENTREGABLES:
+Por favor, muestra cómo quedan estructurados los nuevos archivos independientes. Puedes empezar facilitando el archivo común de estilos `style.css` con la nueva paleta de colores, el archivo `script.js` adaptable a las páginas, y la estructura base de las plantillas HTML para **Mazcufit**.
+
+
+
+SEGUNDO PROMP COMPLEMENTARIO
+
