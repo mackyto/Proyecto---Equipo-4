@@ -76,3 +76,40 @@ Por favor, muestra cómo quedan estructurados los nuevos archivos independientes
 
 SEGUNDO PROMP COMPLEMENTARIO
 
+Actúa como un Desarrollador Web Front-End Senior y Diseñador UX/UI. Vamos a realizar una actualización y reestructuración completa sobre el proyecto de la web de fitness. 
+
+Aplica estrictamente los siguientes cambios estructurales, estéticos y de identidad visual, manteniendo un código limpio, profesional, responsivo y sin errores:
+
+### 1. REBRANDING E IDENTIDAD DE MARCA
+- El nombre oficial de la página web y de la tienda de merchandising es: **Mazcufit**.
+- **Reemplazo del Logo:** Elimina por completo cualquier recuadro genérico de texto que diga "Mz". En su lugar, implementa una etiqueta de imagen `<img>` que cargue el logotipo oficial de la empresa mediante la ruta `src="img/logo.png"` (añade un id o clase para controlar su tamaño de forma profesional en CSS).
+
+### 2. PALETA DE COLORES OFICIAL (Mazcufit Palette)
+Debes configurar el archivo `style.css` utilizando variables CSS (`:root`) con la siguiente paleta exacta de colores. Está completamente prohibido usar fondos blancos o layouts genéricos:
+- **Negro (`#000000`):** Color de fondo principal para toda la web y secciones clave, aportando una estética premium y de gimnasio de alta resistencia.
+- **Gris Oscuro (`#1a1a1a` o `#262626`):** Para tarjetas (cards), contenedores de formularios, bloques secundarios y fondos de tablas.
+- **Rojo un poco más oscuro (`#8b0000`):** Para bordes de tarjetas, estados hover de elementos secundarios y encabezados de tablas (`<th>`).
+- **Rojo Principal (`#ff0000`):** Color corporativo principal para los botones interactivos, enlaces activos y acentos visuales importantes.
+- **Rojo Claro (`#ff6666`):** Para textos destacados de tamaño grande (como títulos principales `<h1>` o textos secundarios con énfasis).
+- **Beige / Veis (`#f5f5dc` o `#f4f1ea`):** Color exclusivo para el texto del cuerpo (`<body>`), párrafos y etiquetas, garantizando un contraste excelente y legible sobre los fondos negros y oscuros.
+
+### 3. DISEÑO MULTIPÁGINA INDEPENDIENTE
+El sitio web ya no debe ser una sola ventana ("Single Page Application"). Debe dividirse en **6 archivos HTML totalmente independientes**:
+1. `index.html` -> Página Inicial (Home con el logotipo en grande centrado).
+2. `nosotros.html` -> Quiénes Somos (Explicación de a qué nos dedicamos).
+3. `registro.html` -> Formulario de Ingreso (Campos obligatorios: Nombre/Apellidos, Email, Teléfono).
+4. `ubicacion.html` -> Ubicación e Instalaciones (Contenedor para mapa interactivo y galería de fotos).
+5. `tienda.html` -> Tienda de Merchandising de Mazcufit.
+6. `menus.html` -> Menús Equilibrados del Día (Organizados visualmente).
+
+*Nota técnica:* El menú persistente superior (Sticky Navbar con el botón para regresar al Home en la última posición) y el pie de página (Footer con los botones directos a Gmail y WhatsApp) deben estar perfectamente replicados en los 6 archivos HTML.
+
+### 4. ALINEACIÓN Y MAQUETACIÓN PROFESIONAL
+- **Texto centrado al eje de la pantalla:** Asegúrate de que todos los títulos principales, textos de bienvenida y llamadas a la acción (CTA) estén perfectamente encuadrados y alineados al centro de la pantalla (`text-align: center`, usando `margin: 0 auto` o maquetación con Flexbox/Grid orientada al centro según corresponda).
+- El diseño debe seguir siendo 100% responsivo para smartphones, tablets y ordenadores de escritorio.
+
+Por favor, proporciona el código estructurado comenzando por el archivo global `style.css`, seguido del archivo de comportamiento `script.js` y las plantillas para los archivos HTML autónomos.
+
+
+TERCER PROMP COMPLEMENTARIO
+
