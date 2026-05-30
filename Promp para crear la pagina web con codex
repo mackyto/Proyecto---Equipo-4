@@ -128,3 +128,16 @@ Aplica las siguientes modificaciones y mejoras de funcionalidad sobre el proyect
 Por favor, muestra las modificaciones necesarias en el archivo `script.js` para gestionar el bloqueo de acceso, el código CSS del modal de registro en `style.css` y la actualización del archivo `ubicacion.html` con el nuevo mapa.
 
 CUARTO PROMP COMPLEMENTARIO
+
+Aplica una nueva modificación sobre el proyecto web de Mazcufit para eliminar la restricción de acceso:
+
+### 1. ELIMINAR EL MURO DE REGISTRO / ACCESO RESTRINGIDO
+- Elimina por completo el sistema de bloqueo (Modal / Overlay / Pantalla superpuesta) que obligaba al usuario a registrarse antes de ver la web.
+- La navegación por las 6 páginas del sitio debe ser totalmente libre, directa y abierta desde el momento en que se carga `index.html`.
+
+### 2. LIMPIEZA DE CÓDIGO
+- **En CSS (`style.css`):** Borra todos los estilos relacionados con el modal de bloqueo, el fondo oscurecido de restricción y las animaciones de ocultar dicha pantalla.
+- **En JavaScript (`script.js`):** Elimina las funciones de validación previa al acceso y los scripts que ocultaban el contenido o bloqueaban el scroll de la página.
+- **En HTML:** Asegúrate de que las páginas no contengan la estructura del formulario de bloqueo inicial. El formulario de ingreso de datos debe quedar alojado única y exclusivamente dentro de su propia sección independiente (`registro.html`), funcionando como un formulario de contacto o inscripción normal y limpio.
+
+Mantén intactos el resto de los componentes: la paleta de colores oficial (negro, gris oscuro, la gama de rojos y beige), los textos centrados, el menú superior fijo (Sticky Navbar), el pie de página con Gmail/WhatsApp y la ubicación en el Embalse de Benagéber (Valencia). Muestra el código limpio y actualizado.
