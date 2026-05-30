@@ -113,3 +113,18 @@ Por favor, proporciona el código estructurado comenzando por el archivo global 
 
 TERCER PROMP COMPLEMENTARIO
 
+Aplica las siguientes modificaciones y mejoras de funcionalidad sobre el proyecto web de Mazcufit, manteniendo la paleta de colores (negro, gris oscuro, la gama de rojos y beige) y el diseño profesional centrado:
+
+### 1. MURO DE REGISTRO / ACCESO RESTRINGIDO (Antes de ver la Web)
+- Implementa un sistema de bloqueo de contenido mediante JavaScript y CSS. Cuando un usuario entre a cualquier página de la web (o al index.html), no debe poder ver ni interactuar con el contenido del sitio hasta que se registre.
+- Crea una pantalla superpuesta a pantalla completa (Modal / Overlay) fija y con fondo oscuro (`#1a1a1a`), perfectamente centrada, que actúe como "Formulario de Acceso Obligatorio".
+- Este formulario debe pedir: Nombre y Apellidos, Correo Electrónico y Teléfono. Todos los campos son estrictamente obligatorios.
+- Al hacer clic en "Enviar/Ingresar", el script de JS debe validar los campos, ocultar el formulario de bloqueo de forma animada (o redirigir al Home seguro) y permitir finalmente la navegación libre por las 6 páginas de Mazcufit.
+
+### 2. UBICACIÓN REAL EN VALENCIA (Embalse de Benagéber)
+- En la página `ubicacion.html`, configura el contenedor del mapa interactivo para que apunte a una localización real en Valencia, España, específicamente en una zona cercana al **Embalse de Benagéber** (puedes simular las coordenadas exactas o integrar un código de inserción / iframe de Google Maps centrado en el Embalse de Benagéber, Valencia).
+- Añade un texto centrado debajo del mapa que indique la dirección física simulada en este entorno natural (ej. "Carretera del Embalse, S/N, Benagéber, Valencia").
+
+Por favor, muestra las modificaciones necesarias en el archivo `script.js` para gestionar el bloqueo de acceso, el código CSS del modal de registro en `style.css` y la actualización del archivo `ubicacion.html` con el nuevo mapa.
+
+CUARTO PROMP COMPLEMENTARIO
