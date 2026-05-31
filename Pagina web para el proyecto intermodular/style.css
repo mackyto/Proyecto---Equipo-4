@@ -1071,6 +1071,18 @@ img {
     border-bottom: 1px solid var(--color-border);
 }
 
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 15px;
+    transition: var(--transition-slow);
+}
+
+.product-card:hover .product-img {
+    transform: scale(1.06);
+}
+
 .product-badge {
     position: absolute;
     top: 16px;
@@ -1465,24 +1477,18 @@ img {
     border-radius: var(--border-radius-lg);
     overflow: hidden;
     border: 1px solid var(--color-border);
+    position: relative;
 }
 
-.visual-placeholder.breakfast-photo {
-    background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+.menu-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-slow);
 }
 
-.visual-placeholder.lunch-photo {
-    background: linear-gradient(135deg, #400000 0%, #000000 100%);
-}
-
-.visual-placeholder.dinner-photo {
-    background: linear-gradient(135deg, #1a0000 0%, #000000 100%);
-}
-
-.food-icon-fallback {
-    font-size: 6rem;
-    color: var(--color-border);
-    opacity: 0.2;
+.menu-img-wrapper:hover .menu-img {
+    transform: scale(1.06);
 }
 
 .menu-details {

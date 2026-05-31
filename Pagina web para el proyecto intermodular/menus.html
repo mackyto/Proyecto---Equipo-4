@@ -1,24 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Optimization -->
     <title>Planes Nutricionales | Menús Mazcufit</title>
-    <meta name="description" content="Explora los menús nutricionales saludables y equilibrados diseñados por expertos en nutrición deportiva para Mazcufit.">
-    <meta name="keywords" content="fitness, nutrición deportiva, desayuno saludable, almuerzo proteico, cena ligera, macronutrientes, Mazcufit">
+    <meta name="description"
+        content="Explora los menús nutricionales saludables y equilibrados diseñados por expertos en nutrición deportiva para Mazcufit.">
+    <meta name="keywords"
+        content="fitness, nutrición deportiva, desayuno saludable, almuerzo proteico, cena ligera, macronutrientes, Mazcufit">
     <meta name="author" content="Mazcufit Wellness Club">
-    
+
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
+
     <!-- Core Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- STICKY NAVBAR -->
@@ -26,7 +31,8 @@
         <div class="navbar-container container">
             <a href="index.html" class="logo-link" aria-label="Volver al inicio">
                 <div class="logo">
-                    <img src="img/logo.png" alt="Mazcufit Logo" class="logo-img" onerror="this.onerror=null; this.outerHTML='<svg class=\'logo-icon\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/><path d=\'M35,38 L50,68 L65,38\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/></svg>'">
+                    <img src="img/logo.png" alt="Mazcufit Logo" class="logo-img"
+                        onerror="this.onerror=null; this.outerHTML='<svg class=\'logo-icon\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/><path d=\'M35,38 L50,68 L65,38\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/></svg>'">
                     <span class="logo-text">MAZCUFIT</span>
                 </div>
             </a>
@@ -73,7 +79,7 @@
     <div class="cart-drawer glass" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Carrito de compras">
         <div class="cart-drawer-header">
             <h2>
-                <i class="fa-solid fa-shopping-bag"></i> 
+                <i class="fa-solid fa-shopping-bag"></i>
                 <span data-i18n="cart-header-title">Tu Carrito</span>
             </h2>
             <button class="cart-close-btn" id="cart-close-btn" aria-label="Cerrar carrito">
@@ -87,7 +93,8 @@
             <div class="cart-empty-state" id="cart-empty">
                 <i class="fa-solid fa-basket-shopping"></i>
                 <p data-i18n="cart-empty-text">Tu carrito está vacío.</p>
-                <a href="tienda.html" class="btn btn-secondary btn-sm" id="cart-go-shop" data-i18n="cart-btn-shop">Ver Productos</a>
+                <a href="tienda.html" class="btn btn-secondary btn-sm" id="cart-go-shop" data-i18n="cart-btn-shop">Ver
+                    Productos</a>
             </div>
         </div>
 
@@ -97,7 +104,8 @@
                 <span data-i18n="cart-total-label">Total a pagar</span>
                 <span class="cart-total-price" id="cart-total-price">0.00 €</span>
             </div>
-            <button class="btn btn-primary full-width btn-checkout" id="checkout-btn" data-i18n="cart-btn-checkout">Finalizar Compra</button>
+            <button class="btn btn-primary full-width btn-checkout" id="checkout-btn"
+                data-i18n="cart-btn-checkout">Finalizar Compra</button>
         </div>
     </div>
 
@@ -109,22 +117,27 @@
                 <div class="section-header center">
                     <span class="section-subtitle" data-i18n="nutrition-subtitle">ALIMENTACIÓN CONSCIENTE</span>
                     <h2 class="section-title" data-i18n="nutrition-title">Planes Nutricionales Mazcufit</h2>
-                    <p class="section-intro" data-i18n="nutrition-intro">Un menú diario equilibrado diseñado por nuestros especialistas en nutrición celular para mantener tus niveles de energía constantes y promover la longevidad celular.</p>
+                    <p class="section-intro" data-i18n="nutrition-intro">Un menú diario equilibrado diseñado por
+                        nuestros especialistas en nutrición celular para mantener tus niveles de energía constantes y
+                        promover la longevidad celular.</p>
                     <div class="accent-line"></div>
                 </div>
 
                 <!-- Interactive Tabs selector for Breakfast, Lunch, Dinner -->
                 <div class="tabs-container glass">
                     <div class="tabs-list" role="tablist">
-                        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="breakfast-panel" id="tab-breakfast" data-tab="breakfast">
+                        <button class="tab-btn active" role="tab" aria-selected="true" aria-controls="breakfast-panel"
+                            id="tab-breakfast" data-tab="breakfast" onclick="switchTab('breakfast')">
                             <i class="fa-solid fa-mug-saucer"></i>
                             <span data-i18n="tab-breakfast">Desayuno</span>
                         </button>
-                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="lunch-panel" id="tab-lunch" data-tab="lunch">
+                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="lunch-panel"
+                            id="tab-lunch" data-tab="lunch" onclick="switchTab('lunch')">
                             <i class="fa-solid fa-utensils"></i>
                             <span data-i18n="tab-lunch">Almuerzo</span>
                         </button>
-                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="dinner-panel" id="tab-dinner" data-tab="dinner">
+                        <button class="tab-btn" role="tab" aria-selected="false" aria-controls="dinner-panel"
+                            id="tab-dinner" data-tab="dinner" onclick="switchTab('dinner')">
                             <i class="fa-solid fa-moon"></i>
                             <span data-i18n="tab-dinner">Cena</span>
                         </button>
@@ -132,32 +145,37 @@
 
                     <!-- TABS CONTENT PANELS -->
                     <div class="tabs-content">
-                        
+
                         <!-- Panel Breakfast -->
-                        <div class="tab-panel active" id="breakfast-panel" role="tabpanel" aria-labelledby="tab-breakfast">
+                        <div class="tab-panel active" id="breakfast-panel" role="tabpanel"
+                            aria-labelledby="tab-breakfast">
                             <div class="menu-item-grid">
                                 <div class="menu-img-wrapper">
-                                    <div class="visual-placeholder breakfast-photo">
-                                        <i class="fa-solid fa-egg food-icon-fallback"></i>
-                                    </div>
+                                    <img src="assets/images/desayuno.jpg"
+                                        alt="Avena Proteica con Frutos Rojos y Semillas" class="menu-img">
                                 </div>
                                 <div class="menu-details">
                                     <div class="menu-header">
                                         <h3 data-i18n="menu-bf-title">Avena Proteica con Frutos Rojos y Semillas</h3>
                                         <span class="calorie-badge">380 kcal</span>
                                     </div>
-                                    <p class="menu-desc" data-i18n="menu-bf-desc">Avena hidratada en leche vegetal enriquecida con proteína limpia de suero. Coronada con fresas silvestres orgánicas, arándanos, semillas de chía para omega-3 y un toque de canela de Ceilán.</p>
-                                    
+                                    <p class="menu-desc" data-i18n="menu-bf-desc">Avena hidratada en leche vegetal
+                                        enriquecida con proteína limpia de suero. Coronada con fresas silvestres
+                                        orgánicas, arándanos, semillas de chía para omega-3 y un toque de canela de
+                                        Ceilán.</p>
+
                                     <div class="nutrients-breakdown">
                                         <h4 data-i18n="menu-macro-title">Composición de Macronutrientes</h4>
-                                        
+
                                         <!-- Proteínas -->
                                         <div class="macro-bar-group">
                                             <div class="macro-info">
                                                 <span data-i18n="macro-prot">Proteínas</span>
                                                 <span>25g (26%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-prot" style="width: 26%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-prot" style="width: 26%;"></div>
+                                            </div>
                                         </div>
 
                                         <!-- Carbohidratos -->
@@ -166,7 +184,9 @@
                                                 <span data-i18n="macro-carb">Carbohidratos</span>
                                                 <span>48g (50%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-carb" style="width: 50%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-carb" style="width: 50%;"></div>
+                                            </div>
                                         </div>
 
                                         <!-- Grasas -->
@@ -175,7 +195,9 @@
                                                 <span data-i18n="macro-fat">Grasas Saludables</span>
                                                 <span>10g (24%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-fat" style="width: 24%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-fat" style="width: 24%;"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -186,94 +208,110 @@
                         <div class="tab-panel" id="lunch-panel" role="tabpanel" aria-labelledby="tab-lunch">
                             <div class="menu-item-grid">
                                 <div class="menu-img-wrapper">
-                                    <div class="visual-placeholder lunch-photo">
-                                        <i class="fa-solid fa-utensils food-icon-fallback"></i>
-                                    </div>
+                                    <img src="assets/images/almuerzo.jpg"
+                                        alt="Arroz Basmati Integral con Pollo y Aguacate" class="menu-img">
                                 </div>
                                 <div class="menu-details">
                                     <div class="menu-header">
                                         <h3 data-i18n="menu-lu-title">Arroz Basmati Integral con Pollo y Aguacate</h3>
                                         <span class="calorie-badge">650 kcal</span>
                                     </div>
-                                    <p class="menu-desc" data-i18n="menu-lu-desc">Arroz integral de grano largo cocido al vapor, acompañado de pechuga de pollo de corral a la plancha con finas hierbas y cubos de aguacate fresco para aportar ácidos grasos esenciales.</p>
-                                    
+                                    <p class="menu-desc" data-i18n="menu-lu-desc">Arroz integral de grano largo cocido
+                                        al vapor, acompañado de pechuga de pollo de corral a la plancha con finas
+                                        hierbas y cubos de aguacate fresco para aportar ácidos grasos esenciales.</p>
+
                                     <div class="nutrients-breakdown">
                                         <h4 data-i18n="menu-macro-title">Composición de Macronutrientes</h4>
-                                        
+
                                         <!-- Proteínas -->
                                         <div class="macro-bar-group">
                                             <div class="macro-info">
                                                 <span data-i18n="macro-prot">Proteínas</span>
                                                 <span>45g (28%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-prot" style="width: 28%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-prot" style="width: 28%;"></div>
+                                            </div>
                                         </div>
- 
+
                                         <!-- Carbohidratos -->
                                         <div class="macro-bar-group">
                                             <div class="macro-info">
                                                 <span data-i18n="macro-carb">Carbohidratos</span>
                                                 <span>75g (46%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-carb" style="width: 46%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-carb" style="width: 46%;"></div>
+                                            </div>
                                         </div>
- 
+
                                         <!-- Grasas -->
                                         <div class="macro-bar-group">
                                             <div class="macro-info">
                                                 <span data-i18n="macro-fat">Grasas Saludables</span>
                                                 <span>19g (26%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-fat" style="width: 26%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-fat" style="width: 26%;"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
- 
+
                         <!-- Panel Dinner -->
                         <div class="tab-panel" id="dinner-panel" role="tabpanel" aria-labelledby="tab-dinner">
                             <div class="menu-item-grid">
                                 <div class="menu-img-wrapper">
-                                    <div class="visual-placeholder dinner-photo">
-                                        <i class="fa-solid fa-moon food-icon-fallback"></i>
-                                    </div>
+                                    <img src="assets/images/cena.jpg"
+                                        alt="Lomo de Salmón al Horno con Espárragos y Calabacín" class="menu-img">
                                 </div>
                                 <div class="menu-details">
                                     <div class="menu-header">
-                                        <h3 data-i18n="menu-dn-title">Lomo de Salmón al Horno con Espárragos y Calabacín</h3>
+                                        <h3 data-i18n="menu-dn-title">Lomo de Salmón al Horno con Espárragos y Calabacín
+                                        </h3>
                                         <span class="calorie-badge">480 kcal</span>
                                     </div>
-                                    <p class="menu-desc" data-i18n="menu-dn-desc">Filete de salmón rico en Omega-3 sellado al horno sobre una base de finas rodajas de calabacín y espárragos verdes salteados, ideal para una digestión nocturna óptima y reparación muscular.</p>
-                                    
+                                    <p class="menu-desc" data-i18n="menu-dn-desc">Filete de salmón rico en Omega-3
+                                        sellado al horno sobre una base de finas rodajas de calabacín y espárragos
+                                        verdes salteados, ideal para una digestión nocturna óptima y reparación
+                                        muscular.</p>
+
                                     <div class="nutrients-breakdown">
                                         <h4 data-i18n="menu-macro-title">Composición de Macronutrientes</h4>
-                                        
+
                                         <!-- Proteínas -->
                                         <div class="macro-bar-group">
                                             <div class="macro-info">
                                                 <span data-i18n="macro-prot">Proteínas</span>
                                                 <span>40g (33%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-prot" style="width: 33%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-prot" style="width: 33%;"></div>
+                                            </div>
                                         </div>
- 
+
                                         <!-- Carbohidratos -->
                                         <div class="macro-bar-group">
                                             <div class="macro-info">
                                                 <span data-i18n="macro-carb">Carbohidratos</span>
                                                 <span>15g (12%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-carb" style="width: 12%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-carb" style="width: 12%;"></div>
+                                            </div>
                                         </div>
- 
+
                                         <!-- Grasas -->
                                         <div class="macro-bar-group">
                                             <div class="macro-info">
                                                 <span data-i18n="macro-fat">Grasas Saludables</span>
                                                 <span>29g (55%)</span>
                                             </div>
-                                            <div class="progress-bar-bg"><div class="progress-bar fill-fat" style="width: 55%;"></div></div>
+                                            <div class="progress-bar-bg">
+                                                <div class="progress-bar fill-fat" style="width: 55%;"></div>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -292,10 +330,13 @@
             <!-- Columna 1 -->
             <div class="footer-col footer-about-col">
                 <div class="logo">
-                    <img src="img/logo.png" alt="Mazcufit Logo" class="logo-img" onerror="this.onerror=null; this.outerHTML='<svg class=\'logo-icon\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/><path d=\'M35,38 L50,68 L65,38\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/></svg>'">
+                    <img src="img/logo.png" alt="Mazcufit Logo" class="logo-img"
+                        onerror="this.onerror=null; this.outerHTML='<svg class=\'logo-icon\' viewBox=\'0 0 100 100\'><circle cx=\'50\' cy=\'50\' r=\'45\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/><path d=\'M35,38 L50,68 L65,38\' stroke=\'var(--color-border-focus)\' stroke-width=\'8\' fill=\'none\'/></svg>'">
                     <span class="logo-text">MAZCUFIT</span>
                 </div>
-                <p class="footer-desc" data-i18n="footer-desc">El club del bienestar y fitness de lujo. Nutrición celular, bio-entrenamiento consciente y relajación profunda en un entorno de diseño sostenible y vanguardista.</p>
+                <p class="footer-desc" data-i18n="footer-desc">El club del bienestar y fitness de lujo. Nutrición
+                    celular, bio-entrenamiento consciente y relajación profunda en un entorno de diseño sostenible y
+                    vanguardista.</p>
                 <div class="footer-socials">
                     <a href="#" aria-label="Visitar Instagram de Mazcufit"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" aria-label="Visitar Facebook de Mazcufit"><i class="fa-brands fa-facebook"></i></a>
@@ -320,14 +361,17 @@
             <!-- Columna 3 -->
             <div class="footer-col footer-contact-col">
                 <h4 class="footer-title" data-i18n="footer-col-contact">Contáctanos</h4>
-                <p class="contact-prompt" data-i18n="footer-contact-prompt">¿Tienes preguntas o deseas agendar una visita privada a nuestras instalaciones? Escríbenos directamente:</p>
-                
+                <p class="contact-prompt" data-i18n="footer-contact-prompt">¿Tienes preguntas o deseas agendar una
+                    visita privada a nuestras instalaciones? Escríbenos directamente:</p>
+
                 <div class="contact-actions">
-                    <a href="https://wa.me/34600000000?text=Hola%20Mazcufit%20Club!%20Me%20gustaria%20recibir%20informacion%20sobre%20la%20admision." target="_blank" rel="noopener noreferrer" class="btn-contact btn-whatsapp">
+                    <a href="https://wa.me/34600000000?text=Hola%20Mazcufit%20Club!%20Me%20gustaria%20recibir%20informacion%20sobre%20la%20admision."
+                        target="_blank" rel="noopener noreferrer" class="btn-contact btn-whatsapp">
                         <i class="fa-brands fa-whatsapp"></i>
                         <span>WhatsApp Direct</span>
                     </a>
-                    <a href="mailto:info@mazcufit.com?subject=Solicitud%20de%20Informacion%20-%20Mazcufit%20Club&body=Hola!%20Deseo%20conocer%20mas%20detalles%20sobre..." class="btn-contact btn-email">
+                    <a href="mailto:info@mazcufit.com?subject=Solicitud%20de%20Informacion%20-%20Mazcufit%20Club&body=Hola!%20Deseo%20conocer%20mas%20detalles%20sobre..."
+                        class="btn-contact btn-email">
                         <i class="fa-regular fa-envelope"></i>
                         <span>Email Direct</span>
                     </a>
@@ -337,7 +381,8 @@
 
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
-                <p class="copyright">&copy; 2026 Mazcufit. <span data-i18n="footer-rights">Todos los derechos reservados.</span></p>
+                <p class="copyright">&copy; 2026 Mazcufit. <span data-i18n="footer-rights">Todos los derechos
+                        reservados.</span></p>
                 <div class="legal-links">
                     <a href="#" data-i18n="footer-legal-1">Política de Privacidad</a>
                     <a href="#" data-i18n="footer-legal-2">Términos de Uso</a>
@@ -352,4 +397,5 @@
     <!-- CORE SCRIPT -->
     <script src="script.js"></script>
 </body>
+
 </html>

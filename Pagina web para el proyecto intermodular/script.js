@@ -29,7 +29,7 @@ const translations = {
         "about-stat-members": "Miembros Activos",
         "about-stat-success": "Casos de Éxito",
         "about-stat-experts": "Especialistas",
-        
+
         // Nosotros Pilares
         "pilar-title-1": "Nutrición de Precisión",
         "pilar-desc-1": "Planes de alimentación celular diseñados por expertos nutricionistas basados en tu perfil genético y estilo de vida.",
@@ -53,7 +53,7 @@ const translations = {
         "placeholder-email": "correo@ejemplo.com",
         "placeholder-phone": "Ej: 600123456",
         "placeholder-msg": "Cuéntanos brevemente qué deseas lograr...",
-        
+
         // Form Validation Errors
         "err-name": "Por favor, introduce tu nombre y apellidos (mínimo 6 caracteres).",
         "err-email": "Introduce un correo electrónico válido.",
@@ -70,8 +70,10 @@ const translations = {
         "gallery-title-1": "Santuario Termal",
         "gallery-tag-2": "BIOMECÁNICA",
         "gallery-title-2": "Equipamiento Inteligente",
-        "gallery-tag-3": "MENTE & CUERPO",
-        "gallery-title-3": "Estudio de Meditación",
+        "gallery-tag-3": "BIOMECÁNICA 2",
+        "gallery-title-3": "Entrenamiento de Boxeo",
+        "gallery-tag-4": "MENTE & CUERPO",
+        "gallery-title-4": "Estudio de Meditación",
 
         // Tienda Section
         "shop-subtitle": "MAZCUFIT STORE",
@@ -105,13 +107,13 @@ const translations = {
         "tab-breakfast": "Desayuno",
         "tab-lunch": "Almuerzo",
         "tab-dinner": "Cena",
-        
+
         "menu-bf-title": "Avena Proteica con Frutos Rojos y Semillas",
         "menu-bf-desc": "Avena hidratada en leche vegetal enriquecida con proteína limpia de suero. Coronada con fresas silvestres orgánicas, arándanos, semillas de chía para omega-3 y un toque de canela de Ceilán.",
-        
+
         "menu-lu-title": "Arroz Basmati Integral con Pollo y Aguacate",
         "menu-lu-desc": "Arroz integral de grano largo cocido al vapor, acompañado de pechuga de pollo de corral a la plancha con finas hierbas y cubos de aguacate fresco para aportar ácidos grasos esenciales.",
-        
+
         "menu-dn-title": "Lomo de Salmón al Horno con Espárragos y Calabacín",
         "menu-dn-desc": "Filete de salmón rico en Omega-3 sellado al horno sobre una base de finas rodajas de calabacín y espárragos verdes salteados, ideal para una digestión nocturna óptima y reparación muscular.",
 
@@ -194,8 +196,10 @@ const translations = {
         "gallery-title-1": "Thermal Sanctuary",
         "gallery-tag-2": "BIOMECHANICS",
         "gallery-title-2": "Smart Equipment",
-        "gallery-tag-3": "MIND & BODY",
-        "gallery-title-3": "Meditation Studio",
+        "gallery-tag-3": "BIOMECHANICS 2",
+        "gallery-title-3": "Boxing Training",
+        "gallery-tag-4": "MIND & BODY",
+        "gallery-title-4": "Meditation Studio",
 
         // Tienda Section
         "shop-subtitle": "MAZCUFIT STORE",
@@ -229,13 +233,13 @@ const translations = {
         "tab-breakfast": "Breakfast",
         "tab-lunch": "Lunch",
         "tab-dinner": "Dinner",
-        
+
         "menu-bf-title": "Protein Oatmeal with Berries and Seeds",
         "menu-bf-desc": "Hydrated oatmeal in plant-based milk enriched with clean whey protein. Topped with wild organic strawberries, blueberries, chia seeds for omega-3, and a touch of Ceylon cinnamon.",
-        
+
         "menu-lu-title": "Brown Basmati Rice with Chicken and Avocado",
         "menu-lu-desc": "Long-grain brown rice steamed, served with grilled free-range chicken breast seasoned with herbs and fresh avocado cubes for essential fatty acids.",
-        
+
         "menu-dn-title": "Baked Salmon Fillet with Asparagus and Zucchini",
         "menu-dn-desc": "Omega-3 rich salmon fillet baked on a bed of thin zucchini slices and sautéed green asparagus, ideal for optimal night digestion and muscle repair.",
 
@@ -477,16 +481,16 @@ if (form) {
             setTimeout(() => {
                 const userName = nameInput.value.trim();
                 localStorage.setItem("mazcufit_user", userName);
-                
+
                 // Re-render state
                 checkLoginState();
-                
+
                 if (btnText && spinner) {
                     btnText.classList.remove("hidden");
                     spinner.classList.add("hidden");
                 }
                 if (submitBtn) submitBtn.disabled = false;
-                
+
                 // Clear inputs
                 form.reset();
                 document.querySelectorAll(".form-group").forEach(group => group.classList.remove("valid", "invalid"));
@@ -514,26 +518,26 @@ checkLoginState();
 
 // Products Catalog Configuration
 const productsCatalog = {
-    1: { 
-        nameEs: "Botella Térmica Mazcufit", 
-        nameEn: "Mazcufit Thermal Bottle", 
-        price: 34.90, 
-        icon: "fa-bottle-water", 
-        class: "bottle-placeholder" 
+    1: {
+        nameEs: "Botella Térmica Mazcufit",
+        nameEn: "Mazcufit Thermal Bottle",
+        price: 34.90,
+        icon: "fa-bottle-water",
+        class: "bottle-placeholder"
     },
-    2: { 
-        nameEs: "Camiseta Técnica Activa", 
-        nameEn: "Active Tech T-Shirt", 
-        price: 29.90, 
-        icon: "fa-shirt", 
-        class: "shirt-placeholder" 
+    2: {
+        nameEs: "Camiseta Técnica Activa",
+        nameEn: "Active Tech T-Shirt",
+        price: 29.90,
+        icon: "fa-shirt",
+        class: "shirt-placeholder"
     },
-    3: { 
-        nameEs: "Bolsa Deportiva de Algodón", 
-        nameEn: "Cotton Sports Duffel Bag", 
-        price: 45.00, 
-        icon: "fa-bag-shopping", 
-        class: "bag-placeholder" 
+    3: {
+        nameEs: "Bolsa Deportiva de Algodón",
+        nameEn: "Cotton Sports Duffel Bag",
+        price: 45.00,
+        icon: "fa-bag-shopping",
+        class: "bag-placeholder"
     }
 };
 
@@ -587,7 +591,7 @@ function addToCart(productId) {
 
     saveCart();
     renderCart();
-    
+
     // Play badge animation pulse
     if (cartBadge) {
         cartBadge.classList.add("anim-pulse");
@@ -678,7 +682,7 @@ function renderCart() {
     if (cart.length === 0) {
         if (cartEmpty) cartEmpty.classList.remove("hidden");
         if (cartFooter) cartFooter.classList.add("hidden");
-        
+
         // Remove old items elements if any
         document.querySelectorAll(".cart-drawer .cart-item").forEach(el => el.remove());
     } else {
@@ -687,7 +691,7 @@ function renderCart() {
 
         // Remove old items elements first to clean render
         document.querySelectorAll(".cart-drawer .cart-item").forEach(el => el.remove());
-        
+
         // Inject new items
         const tempDiv = document.createElement("div");
         tempDiv.innerHTML = itemsHTML.join("");
@@ -740,32 +744,40 @@ renderCart();
 
 
 // --- 6. INTERACTIVE TABS SWITCHER FOR NUTRITIONAL PLANS ---
-const tabButtons = document.querySelectorAll(".tab-btn");
-const tabPanels = document.querySelectorAll(".tab-panel");
-
-if (tabButtons.length > 0) {
-    tabButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
-            const targetTab = btn.getAttribute("data-tab");
-
-            // Update Active Button states
-            tabButtons.forEach(b => {
-                b.classList.remove("active");
-                b.setAttribute("aria-selected", "false");
-            });
+function switchTab(targetTab) {
+    // Update Active Button states
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        if (btn.getAttribute("data-tab") === targetTab || btn.id === `tab-${targetTab}`) {
             btn.classList.add("active");
             btn.setAttribute("aria-selected", "true");
+        } else {
+            btn.classList.remove("active");
+            btn.setAttribute("aria-selected", "false");
+        }
+    });
 
-            // Update Active Panels states
-            tabPanels.forEach(panel => {
-                panel.classList.remove("active");
-                if (panel.getAttribute("id") === `${targetTab}-panel`) {
-                    panel.classList.add("active");
-                }
-            });
-        });
+    // Update Active Panels states
+    document.querySelectorAll(".tab-panel").forEach(panel => {
+        if (panel.getAttribute("id") === `${targetTab}-panel`) {
+            panel.classList.add("active");
+        } else {
+            panel.classList.remove("active");
+        }
     });
 }
+
+// Bind click listeners dynamically
+document.querySelectorAll(".tab-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+        const targetTab = btn.getAttribute("data-tab");
+        if (targetTab) {
+            switchTab(targetTab);
+        }
+    });
+});
+
+// Expose globally for inline onclick handlers
+window.switchTab = switchTab;
 
 
 // --- 7. PREMIUM TOAST NOTIFICATION ENGINE ---
@@ -829,15 +841,15 @@ function initRegistrationWall() {
     const wallOverlay = document.createElement("div");
     wallOverlay.id = "registration-wall-overlay";
     wallOverlay.className = "reg-wall-overlay";
-    
+
     // Multi-language text templates
-    const introText = currentLang === "es" 
-        ? "Para acceder a las instalaciones, rutinas de entrenamiento y menús saludables de Mazcufit, debes completar tu registro inicial obligatorio." 
+    const introText = currentLang === "es"
+        ? "Para acceder a las instalaciones, rutinas de entrenamiento y menús saludables de Mazcufit, debes completar tu registro inicial obligatorio."
         : "To access Mazcufit's facilities, workout routines, and healthy meals, you must complete your initial mandatory registration.";
-    
+
     const nameLabel = currentLang === "es" ? "Nombre y Apellidos *" : "Full Name *";
     const namePlaceholder = currentLang === "es" ? "Ej: Sofía Alarcón Medina" : "E.g.: Sophia Alarcon Medina";
-    
+
     const emailLabel = currentLang === "es" ? "Correo Electrónico *" : "Email Address *";
     const phoneLabel = currentLang === "es" ? "Número de Teléfono *" : "Phone Number *";
     const btnLabel = currentLang === "es" ? "Registrarme e Ingresar" : "Register and Enter";
@@ -884,7 +896,7 @@ function initRegistrationWall() {
 
     wallForm.addEventListener("submit", (e) => {
         e.preventDefault();
-        
+
         let isValid = true;
 
         // Name Validation
@@ -923,13 +935,13 @@ function initRegistrationWall() {
 
             // Animate wall out
             wallOverlay.classList.add("fade-out");
-            
+
             // Restore scroll
             document.body.style.overflow = "";
 
             setTimeout(() => {
                 wallOverlay.remove();
-                
+
                 // Hide Navbar link
                 if (regLink) {
                     const liParent = regLink.closest("li");
@@ -940,7 +952,7 @@ function initRegistrationWall() {
 
                 // Show dynamic greeting if form exists on the current page
                 checkLoginState();
-                
+
                 // Toast greeting
                 showToast(translations[currentLang]["toast-login"], "success");
             }, 500);
