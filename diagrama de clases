@@ -86,14 +86,13 @@ classDiagram
     Alimento <|-- Fruta
     Alimento <|-- Lacteo
     Alimento <|-- Cereal
-```mermaid
+```
 
 
 
 
 
 
-```mermaid
 classDiagram
     direction TB
 
@@ -394,5 +393,3 @@ classDiagram
     GestorComercio   --> PersisPedido   : usa
     GestorComercio   --> PersisAlerta   : usa
     GestorComercio   --> PersisEmpleado : usa
-
-```mermaid
