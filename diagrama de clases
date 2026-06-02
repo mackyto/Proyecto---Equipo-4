@@ -1,4 +1,4 @@
-``mermaid
+```mermaid
 classDiagram
     class Alimento {
         <<abstract>>
@@ -86,8 +86,7 @@ classDiagram
     Alimento <|-- Fruta
     Alimento <|-- Lacteo
     Alimento <|-- Cereal
-``
-'''
+```mermaid
 
 
 
@@ -396,4 +395,4 @@ classDiagram
     GestorComercio   --> PersisAlerta   : usa
     GestorComercio   --> PersisEmpleado : usa
 
-```
+```mermaid
