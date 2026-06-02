@@ -1,0 +1,41 @@
+# Evaluación Inicial de Riesgos Laborales
+
+## Puesto de trabajo
+Desarrollador/a web.
+
+## Riesgos ergonómicos detectados
+
+- Postura incorrecta durante largas jornadas.
+- Fatiga visual por la exposición de estar mucho en pantallas.
+- Dolor cervical y lumbar por estar casi todo el día sentado.
+- Lesiones por movimientos repetitivos del teclado y ratón.
+
+## Medidas preventivas
+
+- Uso de silla ergonómica ajustable.
+- Pantalla bien puesta a la altura de los ojos.
+- Descansos de 10 a 15 minutos cada hora.
+- Iluminación adecuada a cada puesto de trabajo.
+- Ejercicios de estiramiento por esta sentado casi diariamente.
+
+## Riesgos psicosociales detectados
+
+- Estrés por no llegar a tiempo a plazos de entrega.
+- Sobrecarga de muchas tareas.
+- Dolor mental.
+- Problemas de comunicación dentro del equipo.
+
+## Medidas preventivas
+
+- Planificación de tareas o proyectos.
+- Reuniones periódicas de seguimiento.
+- Distribución de trabajo para cada uno.
+- Formación en gestión del estrés.
+- Fomento del trabajo colaborativo.
+
+## Protocolos formativos e informativos
+
+- Formación inicial en prevención de riesgos laborales.
+- Información sobre ergonomía y salud laboral.
+- Guías de buenas prácticas para trabajo con pantallas.
+- Sesiones informativas sobre bienestar y salud mental.
