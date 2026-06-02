@@ -1,4 +1,4 @@
-```'''mermaid
+```mermaid
 classDiagram
     class Alimento {
         <<abstract>>
@@ -393,4 +393,84 @@ classDiagram
     GestorComercio   --> PersisPedido   : usa
     GestorComercio   --> PersisAlerta   : usa
     GestorComercio   --> PersisEmpleado : usa
-''' mermaid
+``` mermaid
+
+
+```mermaid
+sequenceDiagram
+    actor       U   as Usuario
+    participant F   as FrmNuevoPedido
+    participant GC  as GestorComercio
+    participant P   as Pedido
+    participant LP  as LineaPedido
+    participant PA  as PersisArticulo
+    participant PP  as PersisPedido
+    participant PAL as PersisAlerta
+    participant DB  as MySQL
+
+    U  ->> F  : Selecciona cliente → "Nuevo Pedido"
+    F  ->> GC : iniciarPedido(clienteActual)
+    GC ->> P  : new Pedido(cliente)
+    P -->> GC : pedidoEnCurso creado
+
+    loop Por cada artículo añadido
+        U  ->> F  : Elige artículo + cantidad → "Añadir línea"
+        F  ->> GC : anadirLineaPedido(articulo, cantidad)
+        GC ->> LP : new LineaPedido(cantidad, articulo, pedidoEnCurso)
+        LP ->> LP : valida stock (si ProductoFisico)
+        alt Stock insuficiente
+            LP -->> GC : throws ErrorDatos
+            GC -->> F  : propaga ErrorDatos
+            F  -->> U  : Muestra mensaje de error
+        else Stock OK
+            LP -->> GC : LineaPedido creada
+            GC ->> P  : getLista().add(linea)
+        end
+    end
+
+    U  ->> F  : Pulsa "Confirmar Pedido"
+    F  ->> GC : confirmarPedido()
+    GC ->> P  : getLista().size() != 0
+    GC ->> P  : calcularTotal()
+    P -->> GC : total acumulado
+    GC ->> P  : setTotal(total)
+
+    loop Por cada LineaPedido
+        GC ->> LP : getArticulo()
+        LP -->> GC : articulo
+        alt articulo instanceof ProductoFisico
+            GC ->> GC : nuevoStock = prod.getStock() - cantidad
+            alt nuevoStock menor que 0
+                GC -->> F  : throws ErrorDatos "Stock insuficiente"
+                F  -->> U  : Muestra error
+            else Stock ajustado OK
+                GC ->> GC : prod.setStock(nuevoStock)
+                GC ->> PA : actualizarStock(prod)
+                PA ->> DB : UPDATE ProductoFisico SET stock=? WHERE articulo_id=?
+                DB -->> PA : OK
+                PA -->> GC : true
+                GC ->> PAL : recuperarTodas()
+                PAL ->> DB : SELECT * FROM v_alertastock
+                DB -->> PAL : ResultSet alertas
+                PAL -->> GC : List~AlertaStock~
+                GC ->> GC : this.alertaStock = lista actualizada
+            end
+        end
+    end
+
+    GC ->> GC  : clienteActual.añadirPedido(pedidoEnCurso)
+    GC ->> PP  : persistirPedido(pedidoEnCurso)
+    PP ->> DB  : BEGIN TRANSACTION
+    PP ->> DB  : INSERT INTO Pedido (fecha, precio_total, cliente_id)
+    DB -->> PP : GENERATED KEY idPedido
+    loop Por cada LineaPedido
+        PP ->> DB : INSERT INTO LineasPedido (pedido_id, num_linea, articulo_id, cantidad, precio_unitario)
+    end
+    PP ->> DB  : COMMIT
+    DB -->> PP : OK
+    PP -->> GC : true
+
+    GC ->> GC  : pedidoEnCurso = null
+    GC -->> F  : Pedido confirmado (objeto Pedido)
+    F  -->> U  : Muestra resumen y actualiza UI
+```mermaid
