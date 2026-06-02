@@ -1,4 +1,4 @@
-```mermaid
+```'''mermaid
 classDiagram
     class Alimento {
         <<abstract>>
@@ -87,12 +87,12 @@ classDiagram
     Alimento <|-- Lacteo
     Alimento <|-- Cereal
 ```
+'''
 
 
 
 
-
-
+'''mermaid
 classDiagram
     direction TB
 
@@ -393,3 +393,4 @@ classDiagram
     GestorComercio   --> PersisPedido   : usa
     GestorComercio   --> PersisAlerta   : usa
     GestorComercio   --> PersisEmpleado : usa
+''' mermaid
